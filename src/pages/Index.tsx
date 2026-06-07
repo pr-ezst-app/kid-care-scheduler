@@ -240,6 +240,36 @@ export default function Index() {
         </div>
       </section>
 
+      {/* PRICING */}
+      <section className="py-16 px-6 bg-white/60">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 style={{ fontFamily: "'Fredoka One', cursive", fontSize: "2.2rem", color: "#2D1B0E" }} className="mb-2">
+            My Rates 💰
+          </h2>
+          <p className="text-orange-800/60 mb-10">Simple, fair pricing for great care</p>
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-orange-400 to-yellow-400 rounded-3xl p-8 text-white shadow-lg hover:-translate-y-1 transition-all">
+              <div className="text-5xl mb-3">👦</div>
+              <div style={{ fontFamily: "'Fredoka One', cursive", fontSize: "1.5rem" }}>Regular Rate</div>
+              <div style={{ fontFamily: "'Fredoka One', cursive", fontSize: "3rem", lineHeight: 1 }} className="my-3">$15<span className="text-xl">/hr</span></div>
+              <p className="text-white/80 text-sm">Per child · Weekdays & Weekends</p>
+              <div className="mt-4 bg-white/20 rounded-2xl px-4 py-2 text-sm font-semibold">
+                2 kids? That's $30/hr total
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-yellow-400 to-green-400 rounded-3xl p-8 text-white shadow-lg hover:-translate-y-1 transition-all">
+              <div className="text-5xl mb-3">☀️</div>
+              <div style={{ fontFamily: "'Fredoka One', cursive", fontSize: "1.5rem" }}>Summer All-Day Rate</div>
+              <div style={{ fontFamily: "'Fredoka One', cursive", fontSize: "3rem", lineHeight: 1 }} className="my-3">$16<span className="text-xl">/hr</span></div>
+              <p className="text-white/80 text-sm">Per child · Full day summer sits</p>
+              <div className="mt-4 bg-white/20 rounded-2xl px-4 py-2 text-sm font-semibold">
+                $1 extra/hr per kid for all-day sits
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CONTACT */}
       <section id="contact" className="py-16 px-6 bg-gradient-to-br from-orange-50 to-yellow-50">
         <div className="max-w-xl mx-auto">
