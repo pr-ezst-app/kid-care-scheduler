@@ -57,6 +57,7 @@ export default function Index() {
               {[
                 { emoji: "👶", text: "Ages 2–7" },
                 { emoji: "👤", text: "1–2 kids" },
+                { emoji: "📍", text: "Canyon Creek, AB" },
                 { emoji: "📋", text: "Cert. Coming Soon" },
                 { emoji: "📶", text: "WiFi Required" },
               ].map((tag, i) => (
