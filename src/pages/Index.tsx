@@ -105,7 +105,7 @@ export default function Index() {
             </h2>
             <p className="text-orange-800/60 mt-2">Why parents trust me with their little ones</p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 emoji: "🎓",
@@ -120,10 +120,16 @@ export default function Index() {
                 color: "bg-orange-50 border-orange-200",
               },
               {
-                emoji: "🎮",
+                emoji: "🎨",
                 title: "Fun & Engaging",
-                desc: "We'll do crafts, games, and stories — your kids will have a blast while you relax.",
+                desc: "I love doing crafts, going to the park, and playing with kids — your little one will have so much fun!",
                 color: "bg-pink-50 border-pink-200",
+              },
+              {
+                emoji: "🍳",
+                title: "I Can Cook!",
+                desc: "I can prepare simple, kid-friendly meals and snacks so your child is always fed and happy.",
+                color: "bg-green-50 border-green-200",
               },
             ].map((card, i) => (
               <div
@@ -229,6 +235,10 @@ export default function Index() {
               Get in Touch 📬
             </h2>
             <p className="text-orange-800/60 mt-2">Send me a message and I'll get back to you soon!</p>
+            <div className="mt-4 inline-flex items-center gap-2 bg-orange-100 text-orange-800 px-5 py-3 rounded-2xl border border-orange-200 font-semibold text-sm">
+              <span>📞</span>
+              <span>Need to reach me directly? Call my mom: <a href="tel:5875908972" className="font-black text-orange-600 hover:underline">587-590-8972</a></span>
+            </div>
           </div>
 
           {submitted ? (
