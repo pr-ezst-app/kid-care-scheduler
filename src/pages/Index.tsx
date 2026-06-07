@@ -267,6 +267,23 @@ export default function Index() {
               </div>
             </div>
           </div>
+          <div className="mt-8 bg-white rounded-3xl border border-orange-100 shadow-sm p-6 text-left flex flex-col sm:flex-row gap-4">
+            <div className="flex-1 flex items-start gap-3">
+              <span className="text-3xl">💵</span>
+              <div>
+                <div className="font-bold text-orange-900 mb-1">Cash</div>
+                <p className="text-orange-800/70 text-sm">Pay in cash at the end of the session.</p>
+              </div>
+            </div>
+            <div className="w-px bg-orange-100 hidden sm:block" />
+            <div className="flex-1 flex items-start gap-3">
+              <span className="text-3xl">📱</span>
+              <div>
+                <div className="font-bold text-orange-900 mb-1">E-Transfer</div>
+                <p className="text-orange-800/70 text-sm">Send to: <a href="mailto:marieducolon7@gmail.com" className="font-black text-orange-600 hover:underline">marieducolon7@gmail.com</a></p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
