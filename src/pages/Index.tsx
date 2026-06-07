@@ -347,6 +347,10 @@ export default function Index() {
             <p className="text-orange-800/60 mt-2">Send me a message and I'll get back to you soon!</p>
             <div className="mt-4 flex flex-col items-center gap-3">
               <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-800 px-5 py-3 rounded-2xl border border-orange-200 font-semibold text-sm">
+                <span>📱</span>
+                <span>Text/Call Ashley: <a href="tel:5878543601" className="font-black text-orange-600 hover:underline">(587) 854-3601</a></span>
+              </div>
+              <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-800 px-5 py-3 rounded-2xl border border-orange-200 font-semibold text-sm">
                 <span>📞</span>
                 <span>Call my mom: <a href="tel:5875908972" className="font-black text-orange-600 hover:underline">587-590-8972</a></span>
               </div>
