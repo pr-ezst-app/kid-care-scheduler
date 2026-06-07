@@ -168,7 +168,7 @@ export default function Index() {
           <div className="flex flex-wrap justify-center gap-4">
             {[
               { age: "2 yrs", label: "Case by case", color: "bg-blue-100 border-blue-200 text-blue-800" },
-              { age: "3 yrs", label: "Toddler", color: "bg-green-100 border-green-200 text-green-800" },
+              { age: "3 yrs", label: "Case by case", color: "bg-green-100 border-green-200 text-green-800" },
               { age: "4 yrs", label: "Preschool", color: "bg-yellow-100 border-yellow-200 text-yellow-800" },
               { age: "5 yrs", label: "Preschool", color: "bg-orange-100 border-orange-200 text-orange-800" },
               { age: "6 yrs", label: "School Age", color: "bg-pink-100 border-pink-200 text-pink-800" },
@@ -260,10 +260,10 @@ export default function Index() {
             <div className="bg-gradient-to-br from-yellow-400 to-green-400 rounded-3xl p-8 text-white shadow-lg hover:-translate-y-1 transition-all">
               <div className="text-5xl mb-3">☀️</div>
               <div style={{ fontFamily: "'Fredoka One', cursive", fontSize: "1.5rem" }}>Summer All-Day Rate</div>
-              <div style={{ fontFamily: "'Fredoka One', cursive", fontSize: "3rem", lineHeight: 1 }} className="my-3">$16<span className="text-xl">/hr</span></div>
+              <div style={{ fontFamily: "'Fredoka One', cursive", fontSize: "3rem", lineHeight: 1 }} className="my-3">$15<span className="text-xl">/hr</span></div>
               <p className="text-white/80 text-sm">Per child · Full day summer sits</p>
               <div className="mt-4 bg-white/20 rounded-2xl px-4 py-2 text-sm font-semibold">
-                $1 extra/hr per kid for all-day sits
+                2 kids? That's $30/hr total
               </div>
             </div>
           </div>
