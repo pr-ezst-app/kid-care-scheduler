@@ -318,6 +318,11 @@ export default function Index() {
                 a: "No worries! Just let me know as early as possible — the sooner the better so I can plan my schedule. Send me an email or have someone call my mom.",
                 emoji: "📅",
               },
+              {
+                q: "Can you handle a first aid situation?",
+                a: "I can help with basic first aid like cuts, scrapes, and bumps. I'm honest that I haven't learned the Heimlich maneuver yet, but I will be learning it at my upcoming babysitting course. In any emergency I will call 911 and contact you right away.",
+                emoji: "🩹",
+              },
             ].map((item, i) => (
               <div key={i} className="bg-white border-2 border-orange-100 rounded-3xl p-6 flex gap-4 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
                 <span className="text-3xl mt-0.5">{item.emoji}</span>
