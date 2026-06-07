@@ -287,6 +287,50 @@ export default function Index() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-16 px-6">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 style={{ fontFamily: "'Fredoka One', cursive", fontSize: "2.2rem", color: "#2D1B0E" }}>
+              Questions Parents Ask 🙋
+            </h2>
+            <p className="text-orange-800/60 mt-2">Here are some common things parents want to know</p>
+          </div>
+          <div className="flex flex-col gap-4">
+            {[
+              {
+                q: "Do you have experience with babies?",
+                a: "Yes! I have a 1-year-old baby brother at home, so I'm around little ones every single day. I'm used to their needs and how to keep them happy and safe.",
+                emoji: "👶",
+              },
+              {
+                q: "Can you handle bedtime routines?",
+                a: "Absolutely! Just let me know your child's bedtime routine before you leave — I'll follow it as closely as possible so they feel comfortable and settled.",
+                emoji: "🌙",
+              },
+              {
+                q: "Do you bring activities or supplies?",
+                a: "I come with lots of fun ideas for crafts, games, and activities! Parents just need to have basic supplies at home like paper, crayons, or toys.",
+                emoji: "🎨",
+              },
+              {
+                q: "What if I need to cancel?",
+                a: "No worries! Just let me know as early as possible — the sooner the better so I can plan my schedule. Send me an email or have someone call my mom.",
+                emoji: "📅",
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-white border-2 border-orange-100 rounded-3xl p-6 flex gap-4 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
+                <span className="text-3xl mt-0.5">{item.emoji}</span>
+                <div>
+                  <div className="font-bold text-orange-900 mb-1">{item.q}</div>
+                  <p className="text-orange-800/70 text-sm leading-relaxed">{item.a}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CONTACT */}
       <section id="contact" className="py-16 px-6 bg-gradient-to-br from-orange-50 to-yellow-50">
         <div className="max-w-xl mx-auto">
