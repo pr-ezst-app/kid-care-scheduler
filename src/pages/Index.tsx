@@ -255,7 +255,7 @@ export default function Index() {
               </div>
               <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-800 px-5 py-3 rounded-2xl border border-blue-200 font-semibold text-sm">
                 <span>✉️</span>
-                <span>You can also contact me by email — include your email in the form below!</span>
+                <span>Email me: <a href="mailto:maruzsashley237@gmail.com" className="font-black text-blue-600 hover:underline">maruzsashley237@gmail.com</a></span>
               </div>
               <div className="inline-flex items-center gap-2 bg-purple-50 text-purple-800 px-5 py-3 rounded-2xl border border-purple-200 font-semibold text-sm">
                 <span>📶</span>
