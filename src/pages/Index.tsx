@@ -20,7 +20,7 @@ export default function Index() {
         <div className="flex items-center gap-2">
           <span className="text-2xl inline-block" style={{ display: "inline-block", animation: "wiggle 1s ease-in-out infinite" }}>🌟</span>
           <span style={{ fontFamily: "'Fredoka One', cursive", fontSize: "1.4rem", color: "#FF7F5C" }}>
-            Sunny Sitter
+            Ashley's Babysitting
           </span>
         </div>
         <div className="hidden sm:flex gap-6 text-sm font-bold text-orange-800">
@@ -51,7 +51,7 @@ export default function Index() {
               <span style={{ color: "#FF7F5C" }}>Caring</span> Babysitting
             </h1>
             <p className="text-orange-900/70 text-lg leading-relaxed mb-8 max-w-lg">
-              Hi! I'm a certified babysitter ready to give your little ones a great time — and give you the night off you deserve. 💛
+              Hi! I'm Ashley — a responsible and caring babysitter ready to give your little ones a great time, and give you the night off you deserve. 💛
             </p>
             <div className="flex flex-wrap gap-3 mb-8">
               {[
@@ -105,7 +105,7 @@ export default function Index() {
             </h2>
             <p className="text-orange-800/60 mt-2">Why parents trust me with their little ones</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 emoji: "🎓",
@@ -130,6 +130,18 @@ export default function Index() {
                 title: "I Can Cook!",
                 desc: "I can prepare simple, kid-friendly meals and snacks so your child is always fed and happy.",
                 color: "bg-green-50 border-green-200",
+              },
+              {
+                emoji: "🤝",
+                title: "Kind Discipline",
+                desc: "I believe in calm, respectful discipline — setting clear boundaries while always being kind and patient.",
+                color: "bg-blue-50 border-blue-200",
+              },
+              {
+                emoji: "🫂",
+                title: "Emotional Support",
+                desc: "If your child is feeling upset or needs a hug, I'm here for them — I offer comfort and a listening ear.",
+                color: "bg-purple-50 border-purple-200",
               },
             ].map((card, i) => (
               <div
@@ -313,7 +325,7 @@ export default function Index() {
       <footer className="bg-orange-900 text-orange-200 text-center py-8 px-4">
         <div className="text-2xl mb-2">🌟</div>
         <p style={{ fontFamily: "'Fredoka One', cursive", fontSize: "1.1rem", color: "#FFB347" }}>
-          Sunny Sitter
+          Ashley's Babysitting
         </p>
         <p className="text-sm mt-1 opacity-60">Caring for your little ones with love ❤️</p>
       </footer>
