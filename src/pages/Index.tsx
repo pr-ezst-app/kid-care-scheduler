@@ -40,8 +40,8 @@ export default function Index() {
       <section className="relative overflow-hidden px-6 pt-16 pb-10 max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-10">
           <div className="flex-1 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 px-4 py-1.5 rounded-full text-sm font-bold mb-5 border border-yellow-200">
-              <span>🎓</span> Certified Babysitter
+            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-bold mb-5 border border-blue-200">
+              <span>🎓</span> Certification Course Coming Soon!
             </div>
             <h1
               style={{ fontFamily: "'Fredoka One', cursive", fontSize: "clamp(2.5rem, 6vw, 4rem)", lineHeight: 1.1, color: "#2D1B0E" }}
@@ -88,7 +88,7 @@ export default function Index() {
                 <span className="text-2xl">⭐</span>
                 <div>
                   <div className="font-bold text-orange-800 text-sm">Trusted Sitter</div>
-                  <div className="text-xs text-orange-500">Babysitting Certified</div>
+                  <div className="text-xs text-orange-500">Cert. course coming soon!</div>
                 </div>
               </div>
             </div>
@@ -109,8 +109,8 @@ export default function Index() {
             {[
               {
                 emoji: "🎓",
-                title: "Course Certified",
-                desc: "I completed a babysitting certification course — I know first aid basics and how to keep kids safe.",
+                title: "Certification In Progress",
+                desc: "I'm signing up for a babysitting certification course soon — committed to learning first aid and child safety the right way!",
                 color: "bg-yellow-50 border-yellow-200",
               },
               {
