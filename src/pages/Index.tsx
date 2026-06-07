@@ -310,7 +310,7 @@ export default function Index() {
               },
               {
                 q: "Do you bring activities or supplies?",
-                a: "I come with lots of fun ideas for crafts, games, and activities! Parents just need to have basic supplies at home like paper, crayons, or toys.",
+                a: "I come with lots of fun ideas for games and activities! I don't bring craft supplies, so it helps if parents have some basics at home like paper, crayons, or toys.",
                 emoji: "🎨",
               },
               {
