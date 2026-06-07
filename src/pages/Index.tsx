@@ -57,7 +57,8 @@ export default function Index() {
               {[
                 { emoji: "👶", text: "Ages 2–7" },
                 { emoji: "👤", text: "1–2 kids" },
-                { emoji: "📋", text: "Course Certified" },
+                { emoji: "📋", text: "Cert. Coming Soon" },
+                { emoji: "📶", text: "WiFi Required" },
               ].map((tag, i) => (
                 <div
                   key={i}
@@ -247,9 +248,19 @@ export default function Index() {
               Get in Touch 📬
             </h2>
             <p className="text-orange-800/60 mt-2">Send me a message and I'll get back to you soon!</p>
-            <div className="mt-4 inline-flex items-center gap-2 bg-orange-100 text-orange-800 px-5 py-3 rounded-2xl border border-orange-200 font-semibold text-sm">
-              <span>📞</span>
-              <span>Need to reach me directly? Call my mom: <a href="tel:5875908972" className="font-black text-orange-600 hover:underline">587-590-8972</a></span>
+            <div className="mt-4 flex flex-col items-center gap-3">
+              <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-800 px-5 py-3 rounded-2xl border border-orange-200 font-semibold text-sm">
+                <span>📞</span>
+                <span>Call my mom: <a href="tel:5875908972" className="font-black text-orange-600 hover:underline">587-590-8972</a></span>
+              </div>
+              <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-800 px-5 py-3 rounded-2xl border border-blue-200 font-semibold text-sm">
+                <span>✉️</span>
+                <span>You can also contact me by email — include your email in the form below!</span>
+              </div>
+              <div className="inline-flex items-center gap-2 bg-purple-50 text-purple-800 px-5 py-3 rounded-2xl border border-purple-200 font-semibold text-sm">
+                <span>📶</span>
+                <span>Please note: I need WiFi access to stay in touch with my mom via Messenger while I babysit.</span>
+              </div>
             </div>
           </div>
 
