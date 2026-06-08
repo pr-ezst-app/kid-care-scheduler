@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "name": "Get all submissions",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {"submissions": []},
+      "bodyMatcher": "partial"
+    }
+  ]
+}

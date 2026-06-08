@@ -1,0 +1,13 @@
+{
+  "tests": [
+    {
+      "name": "Submit form",
+      "method": "POST",
+      "path": "/",
+      "body": {"name": "Test Parent", "phone": "5550001111", "email": "test@example.com", "message": "Hello!", "rating": 5},
+      "expectedStatus": 200,
+      "expectedBody": {"ok": true},
+      "bodyMatcher": "partial"
+    }
+  ]
+}

@@ -2,10 +2,30 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMAGE = "https://cdn.ezst.app/projects/180255ff-5d07-4afb-9518-9686832ad82a/files/619ea7c0-b9c0-40a0-b9f9-bc4cbf46de66.jpg";
-const FORMSPREE_URL = "https://formspree.io/f/xldnqojv";
+const SUBMIT_URL = "https://functions.poehali.dev/7fce1146-decd-4d8c-a3ff-0e0c5a52666d";
+
+function StarRating({ value, onChange }: { value: number; onChange: (v: number) => void }) {
+  const [hover, setHover] = useState(0);
+  return (
+    <div className="flex gap-1">
+      {[1, 2, 3, 4, 5].map((star) => (
+        <button
+          key={star}
+          type="button"
+          onClick={() => onChange(star)}
+          onMouseEnter={() => setHover(star)}
+          onMouseLeave={() => setHover(0)}
+          className="text-3xl transition-transform hover:scale-110 focus:outline-none"
+        >
+          <span style={{ color: star <= (hover || value) ? "#FBBF24" : "#D1D5DB" }}>★</span>
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export default function Index() {
-  const [form, setForm] = useState({ name: "", phone: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", phone: "", email: "", message: "", rating: 0 });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -13,9 +33,9 @@ export default function Index() {
     e.preventDefault();
     setLoading(true);
     try {
-      await fetch(FORMSPREE_URL, {
+      await fetch(SUBMIT_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
       setSubmitted(true);
@@ -436,6 +456,13 @@ export default function Index() {
                   onChange={e => setForm({ ...form, message: e.target.value })}
                   className="w-full border-2 border-orange-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-300 transition-colors bg-orange-50/30 resize-none"
                 />
+              </div>
+              <div>
+                <label className="text-orange-900 font-bold text-sm mb-2 block">Rate Ashley's service ⭐</label>
+                <StarRating value={form.rating} onChange={v => setForm({ ...form, rating: v })} />
+                {form.rating > 0 && (
+                  <p className="text-xs text-orange-600 mt-1">{["","Not great","It was okay","Good!","Really good!","Amazing! 🌟"][form.rating]}</p>
+                )}
               </div>
               <button
                 type="submit"
