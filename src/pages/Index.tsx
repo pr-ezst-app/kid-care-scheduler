@@ -486,7 +486,15 @@ export default function Index() {
 
       {/* FOOTER */}
       <footer className="bg-orange-900 text-orange-200 text-center py-8 px-4">
-        <div className="text-2xl mb-2">🌟</div>
+        <div
+          className="text-2xl mb-2 cursor-default select-none"
+          onClick={() => {
+            const count = Number(sessionStorage.getItem('_sc') || 0) + 1;
+            sessionStorage.setItem('_sc', String(count));
+            if (count >= 5) { sessionStorage.setItem('_sc', '0'); window.location.href = '/admin'; }
+            setTimeout(() => sessionStorage.setItem('_sc', '0'), 2000);
+          }}
+        >🌟</div>
         <p style={{ fontFamily: "'Fredoka One', cursive", fontSize: "1.1rem", color: "#FFB347" }}>
           Sunny's Sunset Babysitting Service
         </p>
