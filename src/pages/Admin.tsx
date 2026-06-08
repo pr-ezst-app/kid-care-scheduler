@@ -85,7 +85,7 @@ export default function Admin() {
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-3xl font-black text-orange-900" style={{ fontFamily: "'Fredoka One', cursive" }}>📋 Form Submissions</h1>
+            <h1 className="text-3xl font-black text-orange-900" style={{ fontFamily: "'Fredoka One', cursive" }}>Hi, I am Ashley! 👋</h1>
             <p className="text-orange-700/60 text-sm mt-1">{submissions.length} booking request{submissions.length !== 1 ? "s" : ""} total</p>
           </div>
           <button
