@@ -3,6 +3,7 @@ import Icon from "@/components/ui/icon";
 
 const HERO_IMAGE = "https://cdn.ezst.app/projects/180255ff-5d07-4afb-9518-9686832ad82a/files/619ea7c0-b9c0-40a0-b9f9-bc4cbf46de66.jpg";
 const SUBMIT_URL = "https://functions.poehali.dev/7fce1146-decd-4d8c-a3ff-0e0c5a52666d";
+const FORMSPREE_URL = "https://formspree.io/f/xlgkbelb";
 
 function StarRating({ value, onChange }: { value: number; onChange: (v: number) => void }) {
   const [hover, setHover] = useState(0);
@@ -33,11 +34,18 @@ export default function Index() {
     e.preventDefault();
     setLoading(true);
     try {
-      await fetch(SUBMIT_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+      await Promise.all([
+        fetch(SUBMIT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        }),
+        fetch(FORMSPREE_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(form),
+        }),
+      ]);
       setSubmitted(true);
     } finally {
       setLoading(false);
