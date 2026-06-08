@@ -52,7 +52,7 @@ export default function Index() {
         <div className="flex items-center gap-2">
           <span className="text-2xl inline-block" style={{ display: "inline-block", animation: "wiggle 1s ease-in-out infinite" }}>🌟</span>
           <span style={{ fontFamily: "'Fredoka One', cursive", fontSize: "1.4rem", color: "#FF7F5C" }}>
-            Ashley's Babysitting
+            Sunny's Sunset Babysitting Service
           </span>
         </div>
         <div className="hidden sm:flex gap-6 text-sm font-bold text-orange-800">
@@ -87,7 +87,7 @@ export default function Index() {
             </p>
             <div className="flex flex-wrap gap-3 mb-8">
               {[
-                { emoji: "👶", text: "Ages 2–7" },
+                { emoji: "👶", text: "Ages 4+" },
                 { emoji: "👤", text: "1–2 kids" },
                 { emoji: "📍", text: "Canyon Creek, AB" },
                 { emoji: "📋", text: "Cert. Coming Soon" },
@@ -197,15 +197,15 @@ export default function Index() {
           <h2 style={{ fontFamily: "'Fredoka One', cursive", fontSize: "2rem", color: "#2D1B0E" }} className="mb-3">
             Who I Work With 👧🧒
           </h2>
-          <p className="text-orange-800/60 mb-10">I specialize in caring for toddlers and young kids</p>
+          <p className="text-orange-800/60 mb-10">I care for kids 4 and up who are potty trained and can talk</p>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              { age: "2 yrs", label: "Case by case", color: "bg-blue-100 border-blue-200 text-blue-800" },
-              { age: "3 yrs", label: "Case by case", color: "bg-green-100 border-green-200 text-green-800" },
-              { age: "4 yrs", label: "Preschool", color: "bg-yellow-100 border-yellow-200 text-yellow-800" },
+              { age: "4 yrs", label: "Potty trained ✅", color: "bg-yellow-100 border-yellow-200 text-yellow-800" },
               { age: "5 yrs", label: "Preschool", color: "bg-orange-100 border-orange-200 text-orange-800" },
               { age: "6 yrs", label: "School Age", color: "bg-pink-100 border-pink-200 text-pink-800" },
               { age: "7 yrs", label: "School Age", color: "bg-purple-100 border-purple-200 text-purple-800" },
+              { age: "8 yrs", label: "School Age", color: "bg-green-100 border-green-200 text-green-800" },
+              { age: "9+ yrs", label: "School Age", color: "bg-blue-100 border-blue-200 text-blue-800" },
             ].map((item, i) => (
               <div
                 key={i}
@@ -480,7 +480,7 @@ export default function Index() {
       <footer className="bg-orange-900 text-orange-200 text-center py-8 px-4">
         <div className="text-2xl mb-2">🌟</div>
         <p style={{ fontFamily: "'Fredoka One', cursive", fontSize: "1.1rem", color: "#FFB347" }}>
-          Ashley's Babysitting
+          Sunny's Sunset Babysitting Service
         </p>
         <p className="text-sm mt-1 opacity-60">Caring for your little ones with love ❤️</p>
       </footer>
