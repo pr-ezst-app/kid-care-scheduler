@@ -83,7 +83,7 @@ export default function Index() {
               <span style={{ color: "#FF7F5C" }}>Caring</span> Babysitting
             </h1>
             <p className="text-orange-900/70 text-lg leading-relaxed mb-8 max-w-lg">
-              Hi! I'm Ashley — a responsible and caring babysitter ready to give your little ones a great time, and give you the night off you deserve. 💛
+              Hi! I'm Sunny — a responsible and caring babysitter ready to give your little ones a great time, and give you the night off you deserve. 💛
             </p>
             <div className="flex flex-wrap gap-3 mb-8">
               {[
