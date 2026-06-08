@@ -9,6 +9,7 @@ interface Submission {
   name: string;
   phone: string;
   email: string;
+  address: string;
   message: string;
   rating: number | null;
   created_at: string;
@@ -135,6 +136,12 @@ export default function Admin() {
                     <div className="flex items-center gap-2 text-orange-800">
                       <Icon name="Phone" size={14} />
                       <a href={`tel:${s.phone}`} className="hover:underline">{s.phone}</a>
+                    </div>
+                  )}
+                  {s.address && (
+                    <div className="flex items-center gap-2 text-orange-800 sm:col-span-2">
+                      <Icon name="MapPin" size={14} />
+                      <span>{s.address}</span>
                     </div>
                   )}
                 </div>

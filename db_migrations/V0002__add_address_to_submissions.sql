@@ -1,0 +1,1 @@
+ALTER TABLE t_p2806271_kid_care_scheduler.submissions ADD COLUMN IF NOT EXISTS address TEXT;

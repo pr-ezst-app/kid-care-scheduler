@@ -26,7 +26,7 @@ function StarRating({ value, onChange }: { value: number; onChange: (v: number) 
 }
 
 export default function Index() {
-  const [form, setForm] = useState({ name: "", phone: "", email: "", message: "", rating: 0 });
+  const [form, setForm] = useState({ name: "", phone: "", email: "", address: "", message: "", rating: 0 });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -452,6 +452,16 @@ export default function Index() {
                   placeholder="you@example.com"
                   value={form.email}
                   onChange={e => setForm({ ...form, email: e.target.value })}
+                  className="w-full border-2 border-orange-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-300 transition-colors bg-orange-50/30"
+                />
+              </div>
+              <div>
+                <label className="text-orange-900 font-bold text-sm mb-1 block">Home Address 📍</label>
+                <input
+                  type="text"
+                  placeholder="123 Main St, Calgary, AB"
+                  value={form.address}
+                  onChange={e => setForm({ ...form, address: e.target.value })}
                   className="w-full border-2 border-orange-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-300 transition-colors bg-orange-50/30"
                 />
               </div>

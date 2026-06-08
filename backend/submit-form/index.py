@@ -21,6 +21,7 @@ def handler(event: dict, context) -> dict:
     name = body.get('name', '')
     phone = body.get('phone', '')
     email = body.get('email', '')
+    address = body.get('address', '')
     message = body.get('message', '')
     rating = body.get('rating')
 
@@ -28,8 +29,8 @@ def handler(event: dict, context) -> dict:
     cur = conn.cursor()
     schema = os.environ.get('MAIN_DB_SCHEMA', 'public')
     cur.execute(
-        f"INSERT INTO {schema}.submissions (name, phone, email, message, rating) VALUES (%s, %s, %s, %s, %s) RETURNING id",
-        (name, phone, email, message, rating)
+        f"INSERT INTO {schema}.submissions (name, phone, email, address, message, rating) VALUES (%s, %s, %s, %s, %s, %s) RETURNING id",
+        (name, phone, email, address, message, rating)
     )
     row = cur.fetchone()
     conn.commit()

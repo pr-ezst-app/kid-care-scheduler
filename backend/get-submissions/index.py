@@ -21,7 +21,7 @@ def handler(event: dict, context) -> dict:
     cur = conn.cursor()
     schema = os.environ.get('MAIN_DB_SCHEMA', 'public')
     cur.execute(
-        f"SELECT id, name, phone, email, message, rating, created_at FROM {schema}.submissions ORDER BY created_at DESC"
+        f"SELECT id, name, phone, email, address, message, rating, created_at FROM {schema}.submissions ORDER BY created_at DESC"
     )
     rows = cur.fetchall()
     cur.close()
@@ -33,9 +33,10 @@ def handler(event: dict, context) -> dict:
             'name': r[1],
             'phone': r[2],
             'email': r[3],
-            'message': r[4],
-            'rating': r[5],
-            'created_at': r[6].isoformat() if r[6] else None
+            'address': r[4],
+            'message': r[5],
+            'rating': r[6],
+            'created_at': r[7].isoformat() if r[7] else None
         }
         for r in rows
     ]
