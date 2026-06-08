@@ -2,14 +2,26 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMAGE = "https://cdn.ezst.app/projects/180255ff-5d07-4afb-9518-9686832ad82a/files/619ea7c0-b9c0-40a0-b9f9-bc4cbf46de66.jpg";
+const FORMSPREE_URL = "https://formspree.io/f/xldnqojv";
 
 export default function Index() {
   const [form, setForm] = useState({ name: "", phone: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(form),
+      });
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -424,9 +436,10 @@ export default function Index() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-orange-400 hover:bg-orange-500 text-white font-bold text-lg py-4 rounded-2xl shadow-md transition-all hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2"
+                disabled={loading}
+                className="w-full bg-orange-400 hover:bg-orange-500 text-white font-bold text-lg py-4 rounded-2xl shadow-md transition-all hover:scale-[1.02] hover:shadow-lg flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send Message <Icon name="Send" size={18} />
+                {loading ? "Sending..." : <><span>Send Message</span><Icon name="Send" size={18} /></>}
               </button>
             </form>
           )}
